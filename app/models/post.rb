@@ -1,7 +1,7 @@
 
 class TitleValidator < ActiveModel::Validator
   def validate(record)
-    unless record.name.starts_with? 'X'
+    unless record.title.include? "Won't Believe" || record.title.include? 'Secret' || record.title.include? 'Top [number]' || record.title.include? 'Secret'
       record.errors[:name] << 'Need a name starting with X please!'
     end
   end
