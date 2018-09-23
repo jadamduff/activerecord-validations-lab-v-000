@@ -2,7 +2,7 @@
 class TitleValidator < ActiveModel::Validator
   def validate(record)
     unless record.include? "Won't Believe" || record.include? 'Secret' || record.include? 'Top [number]' || record.include? 'Guess'
-      record.errors[:name] << 'Title is not clickbait-y enough.'
+      record.errors[:title] << 'Title is not clickbait-y enough.'
     end
   end
 end
